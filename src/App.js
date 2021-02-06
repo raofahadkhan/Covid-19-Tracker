@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import { MenuItem, FormControl, Select } from "@material-ui/core";
 import InfoBox from "./InfoBox";
+import Map from "./Map";
 
 function App() {
 	const [country, setCountry] = useState("worldwide");
@@ -25,7 +26,6 @@ function App() {
 
 	const onCountryChange = (event) => {
 		const countryCode = event.target.value;
-
 		setCountry(countryCode);
 	};
 
@@ -45,11 +45,10 @@ function App() {
 
 			<div class="app__stats">
 				<InfoBox title="Coronavirus Cases" cases={111} total={2000} />
-
 				<InfoBox title="Recovered" cases={111} total={2000} />
-
 				<InfoBox title="Deaths" cases={111} total={2000} />
 			</div>
+			<Map />
 		</div>
 	);
 }
