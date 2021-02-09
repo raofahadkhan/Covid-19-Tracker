@@ -21,9 +21,11 @@ body {
 
 .app__left {
 	flex: 0.9;
+	margin-right: 20px;
 }
 
 .app__right {
+	flex: 0.1;
 	background-color: white;
 }
 
